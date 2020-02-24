@@ -8,9 +8,11 @@ import {
 } from "./components";
 import "./App.css";
 
+import { GlobalProvider } from "./context/GlobalState";
+
 function App() {
   return (
-    <>
+    <GlobalProvider>
       <Header />
       <div className="container">
         <Balance />
@@ -18,7 +20,7 @@ function App() {
         <TransactionList />
         <AddTransaction />
       </div>
-    </>
+    </GlobalProvider>
   );
 }
 
